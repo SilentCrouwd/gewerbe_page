@@ -821,6 +821,276 @@
           </article>
         </div>
       </section>
+      <!-- Contact Section / Kontakt -->
+      <section
+        id="kontakt"
+        class="max-w-7xl mx-auto my-8 px-4 sm:px-6 lg:px-8 bg-card border border-border rounded-xl p-6 md:p-10"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 flex flex-col gap-6">
+            <div class="flex flex-col gap-3">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold w-fit"
+              >
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
+                Kontakt
+              </div>
+              <h2
+                class="text-2xl sm:text-3xl font-bold text-text tracking-tight"
+              >
+                Sprechen wir über Ihr Projekt
+              </h2>
+              <p class="text-sm sm:text-base text-text-muted leading-relaxed">
+                Haben Sie Fragen oder wünschen Sie ein unverbindliches Angebot?
+                Rufen Sie uns an oder schreiben Sie uns direkt eine Nachricht.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div
+                class="flex items-start gap-4 p-4 rounded-lg bg-background border border-border"
+              >
+                <div
+                  class="p-2.5 rounded-md bg-primary/10 text-primary shrink-0"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-semibold text-text-muted"
+                    >Telefonisch erreichbar</span
+                  >
+                  <a
+                    href="tel:+49123456789"
+                    class="text-sm font-bold text-text hover:text-primary transition-colors"
+                  >
+                    +49 (0) 123 456 789
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="flex items-start gap-4 p-4 rounded-lg bg-background border border-border"
+              >
+                <div
+                  class="p-2.5 rounded-md bg-primary/10 text-primary shrink-0"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-semibold text-text-muted"
+                    >E-Mail schreiben</span
+                  >
+                  <a
+                    href="mailto:info@handwerk-beispiel.de"
+                    class="text-sm font-bold text-text hover:text-primary transition-colors"
+                  >
+                    info@handwerk-beispiel.de
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="flex items-start gap-4 p-4 rounded-lg bg-background border border-border"
+              >
+                <div
+                  class="p-2.5 rounded-md bg-primary/10 text-primary shrink-0"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-semibold text-text-muted"
+                    >Standort / Büro</span
+                  >
+                  <span class="text-sm font-bold text-text"
+                    >Musterstraße 12, 12345 Musterstadt</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="lg:col-span-7 bg-background border border-border rounded-lg p-6 sm:p-8"
+          >
+            <form id="contact-form" class="flex flex-col gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-1.5">
+                  <label for="name" class="text-xs font-semibold text-text"
+                    >Name / Firma *</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Max Mustermann"
+                    class="w-full px-3.5 py-2.5 rounded-md bg-card border border-border text-text text-sm focus:outline-none focus:border-primary transition-colors"
+                  />
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                  <label for="email" class="text-xs font-semibold text-text"
+                    >E-Mail-Adresse *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="max@beispiel.de"
+                    class="w-full px-3.5 py-2.5 rounded-md bg-card border border-border text-text text-sm focus:outline-none focus:border-primary transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-1.5">
+                  <label for="phone" class="text-xs font-semibold text-text"
+                    >Telefonnummer (optional)</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+49 123 456789"
+                    class="w-full px-3.5 py-2.5 rounded-md bg-card border border-border text-text text-sm focus:outline-none focus:border-primary transition-colors"
+                  />
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                  <label
+                    for="service-select"
+                    class="text-xs font-semibold text-text"
+                    >Leistungsbereich</label
+                  >
+                  <select
+                    id="service-select"
+                    name="service"
+                    class="w-full px-3.5 py-2.5 rounded-md bg-card border border-border text-text text-sm focus:outline-none focus:border-primary transition-colors"
+                  >
+                    <option value="Keine Ausgewählt">Bitte wählen...</option>
+                    <option value="Trockenbau &amp; Innenausbau">
+                      Trockenbau &amp; Innenausbau
+                    </option>
+                    <option value="Komplettsanierung">Komplettsanierung</option>
+                    <option value="Bodenbelagsarbeiten">
+                      Bodenbelagsarbeiten
+                    </option>
+                    <option value="Maler- &amp; Tapezierarbeiten">
+                      Maler- &amp; Tapezierarbeiten
+                    </option>
+                    <option value="Energetische Dämmung">
+                      Energetische Dämmung
+                    </option>
+                    <option value="Sonderleistungen &amp; Reparaturen">
+                      Sonderleistungen &amp; Reparaturen
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1.5">
+                <label for="message" class="text-xs font-semibold text-text"
+                  >Ihre Nachricht *</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Beschreiben Sie kurz Ihr Vorhaben oder Ihre Anfrage..."
+                  class="w-full px-3.5 py-2.5 rounded-md bg-card border border-border text-text text-sm focus:outline-none focus:border-primary transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <div class="flex items-start gap-2.5 my-1">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  name="privacy"
+                  required
+                  class="mt-1 h-4 w-4 rounded border-border text-primary focus:ring-primary accent-primary cursor-pointer"
+                />
+                <label
+                  for="privacy"
+                  class="text-xs text-text-muted leading-snug cursor-pointer"
+                >
+                  Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und
+                  Zuordnung für eventuelle Rückfragen gespeichert werden.
+                  Weitere Informationen finden Sie in der
+                  <a
+                    href="#datenschutz"
+                    class="text-primary underline hover:text-primary/80 transition-colors"
+                    >Datenschutzerklärung</a
+                  >. *
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="mt-2 w-full sm:w-fit px-6 py-3 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+              >
+                E-Mail-Programm öffnen
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
