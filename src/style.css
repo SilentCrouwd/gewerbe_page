@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+/* 1. Light Mode Default Base-Variablen */
+:root {
+  --color-primary: #2563eb;
+  --color-secondary: #475569;
+  --color-border: #e2e8f0;
+  --color-card: #ffffff;
+  --color-background: #f8fafc;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+}
+
+/* 2. Dark Mode Überschreibungen */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #3b82f6;
+    --color-secondary: #94a3b8;
+    --color-border: #334155;
+    --color-card: #1e293b;
+    --color-background: #0f172a;
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+  }
+}
+
+/* 3. Tailwind v4 Theme Mapping */
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-border: var(--color-border);
+  --color-card: var(--color-card);
+  --color-background: var(--color-background);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+}
+
+/* 4. Base Layer Reset & Standard-Styling */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+}
