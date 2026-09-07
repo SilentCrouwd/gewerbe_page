@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ausgewählte Projekte von DeinHandwerk: Einblicke in Ausbau, Renovierung und Sanierung."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Projekte | DeinHandwerk" />
+    <meta
+      property="og:description"
+      content="Entdecken Sie ausgewählte Projekte von DeinHandwerk."
+    />
+    <title>Projekte | DeinHandwerk</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-background text-text">
+    <header class="relative z-50 border-b border-border bg-card px-4 md:px-8">
+      <div
+        class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 md:h-20 lg:h-24"
+      >
+        <a
+          href="index.html"
+          class="z-20 text-xl font-bold tracking-tight text-text md:text-2xl lg:text-3xl"
+        >
+          Dein<span class="text-primary">Handwerk</span>
+        </a>
+
+        <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+        <label
+          for="mobile-menu-toggle"
+          class="z-20 flex cursor-pointer select-none items-center justify-center rounded-md p-2 text-text hover:bg-background sm:hidden"
+          aria-label="Menü öffnen"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </label>
+
+        <div
+          class="absolute inset-x-0 top-full hidden flex-col gap-4 border-b border-border bg-card p-4 shadow-xl peer-checked:flex sm:static sm:flex sm:flex-row sm:items-center sm:gap-6 sm:border-none sm:bg-transparent sm:p-0 sm:shadow-none"
+        >
+          <nav aria-label="Hauptnavigation" class="w-full sm:w-auto">
+            <ul
+              class="m-0 flex list-none flex-col gap-2 p-0 sm:flex-row sm:items-center sm:gap-1 md:gap-3"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Startseite</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#about"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Über uns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#service"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Leistungen</a
+                >
+              </li>
+              <li>
+                <a
+                  href="projekt.html"
+                  aria-current="page"
+                  class="block rounded-md bg-background px-4 py-2.5 text-center text-base font-semibold text-primary sm:text-left lg:text-lg"
+                  >Projekte</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#ablauf"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Ablauf</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#faq"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a
+            href="index.html#kontakt"
+            class="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-base font-semibold text-white transition-opacity hover:opacity-90 sm:w-auto md:px-5"
+          >
+            Kontakt
+            <svg
+              class="h-4 w-4 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="px-4 py-8 sm:px-6 md:py-12 lg:px-8">
+      <section
+        class="mx-auto flex max-w-7xl flex-col gap-8 rounded-xl border border-border bg-card p-6 md:p-10"
+      >
+        <div class="flex max-w-3xl flex-col gap-3">
+          <span
+            class="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary"
+          >
+            <span class="h-2 w-2 rounded-full bg-primary"></span>
+            Unsere Projekte
+          </span>
+          <h1
+            class="text-3xl font-bold tracking-tight text-text sm:text-4xl md:text-5xl"
+          >
+            Handwerk, das man sehen kann
+          </h1>
+          <p class="text-base leading-relaxed text-text-muted sm:text-lg">
+            Von der ersten Idee bis zur sauberen Übergabe: Hier zeigen wir eine
+            Auswahl unserer umgesetzten Ausbau-, Renovierungs- und
+            Sanierungsprojekte.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="overflow-hidden rounded-lg border border-border bg-background"
+          >
+            <div
+              class="flex aspect-4/3 items-center justify-center border-b border-border bg-card text-text-muted"
+              aria-label="Bildplatzhalter für Projekt Wohnzimmerausbau"
+            >
+              <div class="flex flex-col items-center gap-2 text-center">
+                <svg
+                  class="h-10 w-10 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M5 20h14a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v14a1 1 0 001 1z"
+                  />
+                </svg>
+                <span class="text-xs font-semibold">Bild folgt</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-5">
+              <span
+                class="text-xs font-semibold uppercase tracking-wide text-primary"
+                >Innenausbau</span
+              >
+              <h2 class="text-lg font-bold">Wohnzimmerausbau</h2>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Moderner Innenausbau mit klaren Linien und hochwertigen
+                Oberflächen.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="overflow-hidden rounded-lg border border-border bg-background"
+          >
+            <div
+              class="flex aspect-4/3 items-center justify-center border-b border-border bg-card text-text-muted"
+              aria-label="Bildplatzhalter für Projekt Badsanierung"
+            >
+              <div class="flex flex-col items-center gap-2 text-center">
+                <svg
+                  class="h-10 w-10 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M5 20h14a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v14a1 1 0 001 1z"
+                  /></svg
+                ><span class="text-xs font-semibold">Bild folgt</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-5">
+              <span
+                class="text-xs font-semibold uppercase tracking-wide text-primary"
+                >Sanierung</span
+              >
+              <h2 class="text-lg font-bold">Badsanierung</h2>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Funktionale Raumgestaltung und präzise Arbeiten für ein neues
+                Bad.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="overflow-hidden rounded-lg border border-border bg-background"
+          >
+            <div
+              class="flex aspect-4/3 items-center justify-center border-b border-border bg-card text-text-muted"
+              aria-label="Bildplatzhalter für Projekt Bodenverlegung"
+            >
+              <div class="flex flex-col items-center gap-2 text-center">
+                <svg
+                  class="h-10 w-10 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M5 20h14a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v14a1 1 0 001 1z"
+                  /></svg
+                ><span class="text-xs font-semibold">Bild folgt</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-5">
+              <span
+                class="text-xs font-semibold uppercase tracking-wide text-primary"
+                >Bodenarbeiten</span
+              >
+              <h2 class="text-lg font-bold">Neue Bodenverlegung</h2>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Sorgfältig vorbereitete Untergründe und langlebige Bodenbeläge.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="overflow-hidden rounded-lg border border-border bg-background"
+          >
+            <div
+              class="flex aspect-4/3 items-center justify-center border-b border-border bg-card text-text-muted"
+              aria-label="Bildplatzhalter für Projekt Dachgeschossausbau"
+            >
+              <div class="flex flex-col items-center gap-2 text-center">
+                <svg
+                  class="h-10 w-10 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M5 20h14a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v14a1 1 0 001 1z"
+                  /></svg
+                ><span class="text-xs font-semibold">Bild folgt</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-5">
+              <span
+                class="text-xs font-semibold uppercase tracking-wide text-primary"
+                >Dachgeschoss</span
+              >
+              <h2 class="text-lg font-bold">Ausbau mit Weitblick</h2>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Mehr Wohnraum durch durchdachte Planung und passgenauen
+                Trockenbau.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="overflow-hidden rounded-lg border border-border bg-background"
+          >
+            <div
+              class="flex aspect-4/3 items-center justify-center border-b border-border bg-card text-text-muted"
+              aria-label="Bildplatzhalter für Projekt Fassadengestaltung"
+            >
+              <div class="flex flex-col items-center gap-2 text-center">
+                <svg
+                  class="h-10 w-10 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M5 20h14a1 1 0 001-1V5a1 1 0 00-1 1v14a1 1 0 001 1z"
+                  /></svg
+                ><span class="text-xs font-semibold">Bild folgt</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-5">
+              <span
+                class="text-xs font-semibold uppercase tracking-wide text-primary"
+                >Fassade</span
+              >
+              <h2 class="text-lg font-bold">Fassadengestaltung</h2>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Ein neuer Auftritt für das Gebäude mit langlebigen Materialien.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="overflow-hidden rounded-lg border border-border bg-background"
+          >
+            <div
+              class="flex aspect-4/3 items-center justify-center border-b border-border bg-card text-text-muted"
+              aria-label="Bildplatzhalter für Projekt Komplettsanierung"
+            >
+              <div class="flex flex-col items-center gap-2 text-center">
+                <svg
+                  class="h-10 w-10 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M5 20h14a1 1 0 001-1V5a1 1 0 001 1v14a1 1 0 001 1z"
+                  /></svg
+                ><span class="text-xs font-semibold">Bild folgt</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-5">
+              <span
+                class="text-xs font-semibold uppercase tracking-wide text-primary"
+                >Komplettsanierung</span
+              >
+              <h2 class="text-lg font-bold">Altbau neu gedacht</h2>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Koordinierte Modernisierung mit einem Ansprechpartner für alle
+                Gewerke.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="flex flex-col items-start justify-between gap-4 border-t border-border pt-6 sm:flex-row sm:items-center"
+        >
+          <p class="max-w-2xl text-sm text-text-muted">
+            Sie planen ein ähnliches Vorhaben? Wir beraten Sie persönlich und
+            finden gemeinsam die passende Lösung.
+          </p>
+          <a
+            href="index.html#kontakt"
+            class="inline-flex gap-2 items-center rounded-md bg-primary px-4 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          >
+            Projekt anfragen
+            <svg
+              class="h-4 w-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-card px-4 py-6 sm:px-6 lg:px-8">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-3 text-xs text-text-muted sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p>© 2026 DeinHandwerk.</p>
+        <nav aria-label="Rechtliche Links" class="flex gap-5">
+          <a href="impressum.html" class="transition-colors hover:text-primary"
+            >Impressum</a
+          >
+          <a
+            href="datenschutz.html"
+            class="transition-colors hover:text-primary"
+            >Datenschutz</a
+          >
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
