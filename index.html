@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body class="bg-background text-text">
+    <!-- Gemeinsame Kopfzeile mit responsiver Navigation und Kontakt-CTA. -->
     <header class="relative border-b border-border bg-card px-4 md:px-8 z-50">
       <div
         class="max-w-7xl mx-auto h-16 md:h-20 lg:h-24 flex items-center justify-between gap-4"
@@ -28,6 +29,8 @@
           for="mobile-menu-toggle"
           class="sm:hidden p-2 rounded-md text-text hover:bg-background cursor-pointer select-none z-20 flex items-center justify-center"
           aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
         >
           <!-- Burger Icon (Standard) -->
           <svg
@@ -47,6 +50,7 @@
 
         <!-- Navigation Overlay & Desktop-Bar -->
         <div
+          id="mobile-navigation"
           class="absolute inset-x-0 top-full bg-card border-b border-border p-4 shadow-xl flex-col gap-4 hidden peer-checked:flex sm:static sm:flex sm:flex-row sm:items-center sm:gap-6 sm:bg-transparent sm:border-none sm:p-0 sm:shadow-none z-10 transition-all"
         >
           <nav aria-label="Hauptnavigation" class="w-full sm:w-auto">
@@ -79,7 +83,7 @@
               </li>
               <li>
                 <a
-                  href="/gewerbe_page/#service"
+                  href="/gewerbe_page/leistungen.html"
                   onclick="
                     document.getElementById('mobile-menu-toggle').checked =
                       false
@@ -103,7 +107,7 @@
               </li>
               <li>
                 <a
-                  href="/gewerbe_page/#ablauf"
+                  href="/gewerbe_page/ablauf.html"
                   onclick="
                     document.getElementById('mobile-menu-toggle').checked =
                       false
@@ -115,7 +119,7 @@
               </li>
               <li>
                 <a
-                  href="/gewerbe_page/#faq"
+                  href="/gewerbe_page/faq.html"
                   onclick="
                     document.getElementById('mobile-menu-toggle').checked =
                       false
@@ -134,7 +138,7 @@
             onclick="
               document.getElementById('mobile-menu-toggle').checked = false
             "
-            class="w-full sm:w-auto px-4 py-2.5 md:px-5 md:py-2.5 rounded-md bg-primary text-white font-semibold text-base hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            class="w-full sm:w-auto px-4 py-2.5 md:px-5 md:py-2.5 rounded-md bg-primary text-on-primary font-semibold text-base hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
               <path
@@ -147,7 +151,9 @@
       </div>
     </header>
 
+    <!-- Startseite: Hero, Über-uns-Bereich, Leistungen und Kontaktformular. -->
     <main class="py-4">
+      <!-- Hero-Bereich mit Einstiegstext, Bild und wichtigsten Kennzahlen. -->
       <!-- Section agiert direkt als Card Container (1 Div eingespart) -->
       <section
         class="min-h-[calc(100vh-6rem)] max-w-7xl mx-auto my-0 px-4 sm:px-6 lg:px-8 bg-card border border-border rounded-xl p-6 md:p-8 flex flex-col justify-between gap-8"
@@ -219,7 +225,7 @@
               <div class="flex flex-col sm:flex-row lg:flex-col gap-3">
                 <a
                   href="#kontakt"
-                  class="px-6 py-3.5 rounded-md bg-primary text-white font-semibold text-sm hover:opacity-90 transition-opacity text-center flex items-center justify-center gap-2 shadow-sm"
+                  class="px-6 py-3.5 rounded-md bg-primary text-on-primary font-semibold text-sm hover:opacity-90 transition-opacity text-center flex items-center justify-center gap-2 shadow-sm"
                 >
                   <span>Jetzt Projekt anfragen</span>
                   <svg
@@ -575,10 +581,10 @@
               </div>
             </div>
             <a
-              href="#kontakt"
+              href="leistungen.html#trockenbau"
               class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline w-fit"
             >
-              Leistung anfragen
+              Details
               <svg
                 class="w-3.5 h-3.5"
                 fill="none"
@@ -629,10 +635,10 @@
               </div>
             </div>
             <a
-              href="#kontakt"
+              href="leistungen.html#komplettsanierung"
               class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline w-fit"
             >
-              Leistung anfragen
+              Details
               <svg
                 class="w-3.5 h-3.5"
                 fill="none"
@@ -683,10 +689,10 @@
               </div>
             </div>
             <a
-              href="#kontakt"
+              href="leistungen.html#bodenlegearbeiten"
               class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline w-fit"
             >
-              Leistung anfragen
+              Details
               <svg
                 class="w-3.5 h-3.5"
                 fill="none"
@@ -739,10 +745,10 @@
               </div>
             </div>
             <a
-              href="#kontakt"
+              href="leistungen.html#malerarbeiten"
               class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline w-fit"
             >
-              Leistung anfragen
+              Details
               <svg
                 class="w-3.5 h-3.5"
                 fill="none"
@@ -795,10 +801,10 @@
               </div>
             </div>
             <a
-              href="#kontakt"
+              href="leistungen.html#energetische-daemmung"
               class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline w-fit"
             >
-              Leistung anfragen
+              Details
               <svg
                 class="w-3.5 h-3.5"
                 fill="none"
@@ -851,10 +857,10 @@
               </div>
             </div>
             <a
-              href="#kontakt"
+              href="leistungen.html#sonderleistungen"
               class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline w-fit"
             >
-              Leistung anfragen
+              Details
               <svg
                 class="w-3.5 h-3.5"
                 fill="none"
@@ -1005,6 +1011,7 @@
           <div
             class="lg:col-span-7 bg-background border border-border rounded-lg p-6 sm:p-8"
           >
+            <!-- JavaScript wandelt die Eingaben beim Absenden in eine mailto-Anfrage um. -->
             <form id="contact-form" class="flex flex-col gap-4">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="flex flex-col gap-1.5">
@@ -1121,7 +1128,7 @@
 
               <button
                 type="submit"
-                class="mt-2 w-full sm:w-fit px-6 py-3 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                class="mt-2 w-full sm:w-fit px-6 py-3 rounded-md bg-primary text-on-primary text-sm font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
               >
                 E-Mail-Programm öffnen
                 <svg
@@ -1144,6 +1151,7 @@
       </section>
     </main>
 
+    <!-- Rechtliche Links und kurzer Abschluss der Seite. -->
     <footer class="border-t border-border bg-card px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto py-12 md:py-16">
         <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -1160,7 +1168,7 @@
             </p>
             <a
               href="#kontakt"
-              class="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              class="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
             >
               Projekt anfragen
               <svg
@@ -1193,9 +1201,16 @@
                 </li>
                 <li>
                   <a
-                    href="#service"
+                    href="leistungen.html"
                     class="transition-colors hover:text-primary"
                     >Leistungen</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="ablauf.html"
+                    class="transition-colors hover:text-primary"
+                    >Ablauf</a
                   >
                 </li>
                 <li>
@@ -1214,10 +1229,54 @@
               Leistungen
             </h2>
             <ul class="mt-4 space-y-3 text-sm text-text-muted">
-              <li>Trockenbau & Innenausbau</li>
-              <li>Komplettsanierung</li>
-              <li>Bodenbelagsarbeiten</li>
-              <li>Maler- & Tapezierarbeiten</li>
+              <li>
+                <a
+                  href="leistungen.html#trockenbau"
+                  class="transition-colors hover:text-primary"
+                >
+                  Trockenbau &amp; Innenausbau
+                </a>
+              </li>
+              <li>
+                <a
+                  href="leistungen.html#komplettsanierung"
+                  class="transition-colors hover:text-primary"
+                >
+                  Komplettsanierung
+                </a>
+              </li>
+              <li>
+                <a
+                  href="leistungen.html#bodenlegearbeiten"
+                  class="transition-colors hover:text-primary"
+                >
+                  Bodenbelagsarbeiten
+                </a>
+              </li>
+              <li>
+                <a
+                  href="leistungen.html#malerarbeiten"
+                  class="transition-colors hover:text-primary"
+                >
+                  Maler- &amp; Tapezierarbeiten
+                </a>
+              </li>
+              <li>
+                <a
+                  href="leistungen.html#energetische-daemmung"
+                  class="transition-colors hover:text-primary"
+                >
+                  Energetische Dämmung
+                </a>
+              </li>
+              <li>
+                <a
+                  href="leistungen.html#sonderleistungen"
+                  class="transition-colors hover:text-primary"
+                >
+                  Sonderleistungen &amp; Reparaturen
+                </a>
+              </li>
             </ul>
           </div>
 

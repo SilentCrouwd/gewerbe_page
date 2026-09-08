@@ -1,7 +1,38 @@
+// Das Formular wird erst nach dem Laden des HTML-Dokuments verbunden, damit
+// die benötigten Eingabefelder sicher vorhanden sind.
 document.addEventListener("DOMContentLoaded", () => {
+  // Die Checkbox bleibt die einfache CSS-Steuerung; diese Logik ergänzt den
+  // zugänglichen Zustand und schließt das Menü nach einer Auswahl.
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+  const mobileMenuButton = document.querySelector(
+    '[aria-controls="mobile-navigation"]',
+  );
+  const mobileNavigation = document.getElementById("mobile-navigation");
+
+  if (mobileMenuToggle && mobileMenuButton && mobileNavigation) {
+    const updateMobileMenuState = () => {
+      const isOpen = mobileMenuToggle.checked;
+      mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+      mobileMenuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Menü schließen" : "Menü öffnen",
+      );
+    };
+
+    mobileMenuToggle.addEventListener("change", updateMobileMenuState);
+    mobileNavigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenuToggle.checked = false;
+        updateMobileMenuState();
+      });
+    });
+    updateMobileMenuState();
+  }
+
   const contactForm = document.getElementById("contact-form");
 
   if (contactForm) {
+    // Die Website nutzt bewusst mailto statt eines eigenen Formularservers.
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
 

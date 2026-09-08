@@ -14,12 +14,12 @@ Die Seite ist ein statischer Vite-Onepager mit:
 
 ## Aktuelle Luecken
 
-
 - nur ein Bild und keine Referenzprojekte
 - keine FAQ, Kundenstimmen oder Einsatzgebiete
 - keine Unterseiten
 - keine sichtbare Formular-Erfolgs- oder Fehlermeldung
-- Inhalte und Kontaktdaten sind teilweise Platzhalter
+- Inhalte, Kontaktdaten und rechtliche Angaben enthalten bewusst Platzhalter,
+  da es sich um eine wiederverwendbare Template-Seite handelt
 - Root-Links muessen wegen der Vite-Basis `/gewerbe_page/` geprueft werden
 
 ## Empfohlene Navigation
@@ -94,6 +94,9 @@ Spaeter koennen einzelne Leistungsdetailseiten ergaenzt werden.
 Der Footer sollte Kontakt, Oeffnungszeiten, Einsatzgebiet, Impressum und Datenschutz enthalten.
 
 Das Impressum benoetigt echte Unternehmensdaten:
+
+In diesem Template bleiben diese Angaben bewusst als Platzhalter bestehen und
+muessen erst bei der Anpassung an ein konkretes Unternehmen ersetzt werden.
 
 - Firmenname
 - ladungsfaehige Anschrift

@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Erfahren Sie, wie Ihr Projekt mit DeinHandwerk von der ersten Anfrage bis zur Abnahme abläuft."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ablauf | DeinHandwerk" />
+    <meta
+      property="og:description"
+      content="Transparent, persönlich und zuverlässig: So läuft Ihr Projekt mit DeinHandwerk ab."
+    />
+    <title>Ablauf | DeinHandwerk</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-background text-text">
+    <!-- Gemeinsame Navigation; der aktuelle Menüpunkt ist mit aria-current markiert. -->
+    <header class="relative z-50 border-b border-border bg-card px-4 md:px-8">
+      <div
+        class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 md:h-20 lg:h-24"
+      >
+        <a
+          href="index.html"
+          class="z-20 text-xl font-bold tracking-tight text-text md:text-2xl lg:text-3xl"
+        >
+          Dein<span class="text-primary">Handwerk</span>
+        </a>
+
+        <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+        <label
+          for="mobile-menu-toggle"
+          class="z-20 flex cursor-pointer select-none items-center justify-center rounded-md p-2 text-text hover:bg-background sm:hidden"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </label>
+
+        <div
+          id="mobile-navigation"
+          class="absolute inset-x-0 top-full hidden flex-col gap-4 border-b border-border bg-card p-4 shadow-xl peer-checked:flex sm:static sm:flex sm:flex-row sm:items-center sm:gap-6 sm:border-none sm:bg-transparent sm:p-0 sm:shadow-none"
+        >
+          <nav aria-label="Hauptnavigation" class="w-full sm:w-auto">
+            <ul
+              class="m-0 flex list-none flex-col gap-2 p-0 sm:flex-row sm:items-center sm:gap-1 md:gap-3"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Startseite</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#about"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Über uns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="leistungen.html"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Leistungen</a
+                >
+              </li>
+              <li>
+                <a
+                  href="projekt.html"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Projekte</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ablauf.html"
+                  aria-current="page"
+                  class="block rounded-md bg-background px-4 py-2.5 text-center text-base font-semibold text-primary sm:text-left lg:text-lg"
+                  >Ablauf</a
+                >
+              </li>
+              <li>
+                <a
+                  href="faq.html"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a
+            href="index.html#kontakt"
+            class="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-base font-semibold text-on-primary transition-opacity hover:opacity-90 sm:w-auto md:px-5"
+          >
+            Kontakt
+            <svg
+              class="h-4 w-4 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Prozessseite: Einführung, fünf Arbeitsschritte und Qualitätsversprechen. -->
+    <main class="px-4 py-8 sm:px-6 md:py-12 lg:px-8">
+      <!-- Einstieg in den Ablauf mit Bild und Kontakt-Call-to-Action. -->
+      <section
+        class="mx-auto flex max-w-7xl flex-col gap-8 rounded-xl border border-border bg-card p-6 md:p-10"
+      >
+        <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+          <div class="flex max-w-3xl flex-col gap-4 lg:col-span-7">
+            <span
+              class="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary"
+            >
+              <span class="h-2 w-2 rounded-full bg-primary"></span>
+              Ihr Projekt in guten Händen
+            </span>
+            <h1
+              class="text-3xl font-bold tracking-tight text-text sm:text-4xl md:text-5xl"
+            >
+              So läuft Ihr Projekt ab
+            </h1>
+            <p class="text-base leading-relaxed text-text-muted sm:text-lg">
+              Von der ersten Idee bis zur sauberen Übergabe begleiten wir Sie
+              persönlich, transparent und mit einem festen Ansprechpartner.
+            </p>
+            <a
+              href="index.html#kontakt"
+              class="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3.5 text-center text-sm font-semibold text-on-primary transition-opacity hover:opacity-90 sm:w-fit"
+            >
+              Projekt besprechen
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="overflow-hidden rounded-lg border border-border lg:col-span-5"
+          >
+            <img
+              src="src/assets/img/sauberPlanung.webp"
+              alt="Planung eines Bauprojekts am Tisch"
+              width="800"
+              height="600"
+              class="h-64 w-full object-cover sm:h-80"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Jeder Artikel beschreibt einen festen Schritt der Zusammenarbeit. -->
+      <section
+        class="mx-auto my-8 max-w-7xl rounded-xl border border-border bg-card p-6 md:p-10"
+        aria-labelledby="prozess-heading"
+      >
+        <div class="mb-8 flex max-w-3xl flex-col gap-3">
+          <span
+            class="text-xs font-semibold uppercase tracking-wide text-primary"
+            >Unser Vorgehen</span
+          >
+          <h2
+            id="prozess-heading"
+            class="text-2xl font-bold tracking-tight text-text sm:text-3xl"
+          >
+            Fünf Schritte zu einem gelungenen Ergebnis
+          </h2>
+          <p class="text-sm leading-relaxed text-text-muted sm:text-base">
+            Sie wissen jederzeit, wo Ihr Projekt steht und was als Nächstes
+            passiert.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-5">
+          <article
+            id="erstgespraech"
+            class="flex flex-col gap-4 rounded-lg border border-border bg-background p-5"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-3xl font-bold text-primary">01</span>
+              <svg
+                class="h-6 w-6 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 10h8M8 14h5m5 7l-3.5-3.5H6a3 3 0 01-3-3V6a3 3 0 013-3h12a3 3 0 013 3v8a3 3 0 01-3 3h-.5L19 21z"
+                />
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-lg font-bold text-text">Erstgespräch</h3>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Sie schildern uns Ihre Wünsche, Ziele und den gewünschten Umfang
+                Ihres Projekts. Das geht telefonisch oder über unser Formular.
+              </p>
+            </div>
+          </article>
+
+          <article
+            id="vor-ort-termin"
+            class="flex flex-col gap-4 rounded-lg border border-border bg-background p-5"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-3xl font-bold text-primary">02</span>
+              <svg
+                class="h-6 w-6 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-lg font-bold text-text">Vor-Ort-Termin</h3>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Wir sehen uns die Gegebenheiten an, nehmen Maße und besprechen
+                Materialien, Anforderungen und offene Fragen direkt vor Ort.
+              </p>
+            </div>
+          </article>
+
+          <article
+            id="angebot"
+            class="flex flex-col gap-4 rounded-lg border border-border bg-background p-5"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-3xl font-bold text-primary">03</span>
+              <svg
+                class="h-6 w-6 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 14l2 2 4-4m2-9H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2z"
+                />
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-lg font-bold text-text">Angebot</h3>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Sie erhalten ein nachvollziehbares Angebot mit Leistungsumfang,
+                Kosten und dem voraussichtlichen Zeitrahmen.
+              </p>
+            </div>
+          </article>
+
+          <article
+            id="ausfuehrung"
+            class="flex flex-col gap-4 rounded-lg border border-border bg-background p-5"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-3xl font-bold text-primary">04</span>
+              <svg
+                class="h-6 w-6 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.7 6.3a1 1 0 00-1.4 0l-7 7a1 1 0 000 1.4l2 2a1 1 0 001.4 0l7-7a1 1 0 000-1.4l-2-2zM12 8l4 4m-8 4l-2 2m10-14l2 2"
+                />
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-lg font-bold text-text">Ausführung</h3>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Wir setzen die vereinbarten Arbeiten fachgerecht, sauber und
+                termintreu um. Mehrere Gewerke koordinieren wir für Sie.
+              </p>
+            </div>
+          </article>
+
+          <article
+            id="abnahme"
+            class="flex flex-col gap-4 rounded-lg border border-border bg-background p-5"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-3xl font-bold text-primary">05</span>
+              <svg
+                class="h-6 w-6 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-lg font-bold text-text">Abnahme</h3>
+              <p class="text-sm leading-relaxed text-text-muted">
+                Gemeinsam prüfen wir das Ergebnis, klären letzte Punkte und
+                übergeben Ihnen die Baustelle sauber und ordentlich.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Ergänzende Erwartungen an die Zusammenarbeit. -->
+      <section
+        class="mx-auto my-8 max-w-7xl rounded-xl border border-border bg-card p-6 md:p-10"
+        aria-labelledby="qualitaet-heading"
+      >
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
+          <div class="flex flex-col gap-3 lg:col-span-5">
+            <span
+              class="text-xs font-semibold uppercase tracking-wide text-primary"
+              >Was Sie erwarten können</span
+            >
+            <h2
+              id="qualitaet-heading"
+              class="text-2xl font-bold tracking-tight text-text sm:text-3xl"
+            >
+              Klar geplant. Sauber umgesetzt.
+            </h2>
+            <p class="text-sm leading-relaxed text-text-muted sm:text-base">
+              Eine gute Zusammenarbeit beginnt mit klaren Absprachen und endet
+              mit einem Ergebnis, das zu Ihren Vorstellungen passt.
+            </p>
+          </div>
+          <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-7">
+            <li
+              class="flex items-start gap-3 rounded-lg border border-border bg-background p-4"
+            >
+              <svg
+                class="mt-0.5 h-5 w-5 shrink-0 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span class="text-sm font-semibold text-text"
+                >Transparente Angebote ohne unnötige Überraschungen</span
+              >
+            </li>
+            <li
+              class="flex items-start gap-3 rounded-lg border border-border bg-background p-4"
+            >
+              <svg
+                class="mt-0.5 h-5 w-5 shrink-0 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span class="text-sm font-semibold text-text"
+                >Ein Ansprechpartner für die nächsten Schritte</span
+              >
+            </li>
+            <li
+              class="flex items-start gap-3 rounded-lg border border-border bg-background p-4"
+            >
+              <svg
+                class="mt-0.5 h-5 w-5 shrink-0 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span class="text-sm font-semibold text-text"
+                >Saubere und termintreue Ausführung</span
+              >
+            </li>
+            <li
+              class="flex items-start gap-3 rounded-lg border border-border bg-background p-4"
+            >
+              <svg
+                class="mt-0.5 h-5 w-5 shrink-0 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span class="text-sm font-semibold text-text"
+                >Persönliche Betreuung vor Ort in der Region</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="mx-auto max-w-7xl rounded-xl border border-border bg-background p-6 text-center md:p-10"
+        aria-labelledby="start-heading"
+      >
+        <div class="mx-auto flex max-w-2xl flex-col items-center gap-4">
+          <h2
+            id="start-heading"
+            class="text-2xl font-bold tracking-tight text-text sm:text-3xl"
+          >
+            Bereit für den ersten Schritt?
+          </h2>
+          <p class="text-sm leading-relaxed text-text-muted sm:text-base">
+            Erzählen Sie uns kurz von Ihrem Vorhaben. Wir besprechen gemeinsam,
+            wie es weitergeht.
+          </p>
+          <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <a
+              href="index.html#kontakt"
+              class="flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+              >Jetzt Projekt anfragen</a
+            >
+            <a
+              href="tel:+49123456789"
+              class="flex items-center justify-center rounded-md border border-border px-6 py-3 text-sm font-semibold text-text transition-colors hover:bg-card"
+              >Direkt anrufen</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Einheitlicher Footer mit rechtlichen Links. -->
+    <footer class="border-t border-border bg-card px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl py-12 md:py-16">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="sm:col-span-2 lg:col-span-1">
+            <a
+              href="index.html"
+              class="text-xl font-bold tracking-tight text-text md:text-2xl"
+            >
+              Dein<span class="text-primary">Handwerk</span>
+            </a>
+            <p class="mt-4 max-w-xs text-sm leading-6 text-text-muted">
+              Ihr zuverlässiger Partner für Ausbau, Renovierung und
+              Sanierungsarbeiten in der Region.
+            </p>
+            <a
+              href="index.html#kontakt"
+              class="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+              >Projekt anfragen</a
+            >
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold uppercase tracking-wide text-text">
+              Navigation
+            </h2>
+            <nav aria-label="Footer-Navigation" class="mt-4">
+              <ul class="space-y-3 text-sm text-text-muted">
+                <li>
+                  <a
+                    href="index.html#about"
+                    class="transition-colors hover:text-primary"
+                    >Über uns</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="leistungen.html"
+                    class="transition-colors hover:text-primary"
+                    >Leistungen</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="projekt.html"
+                    class="transition-colors hover:text-primary"
+                    >Projekte</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="ablauf.html"
+                    class="transition-colors hover:text-primary"
+                    >Ablauf</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="index.html#kontakt"
+                    class="transition-colors hover:text-primary"
+                    >Kontakt</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold uppercase tracking-wide text-text">
+              Kontakt
+            </h2>
+            <address class="mt-4 space-y-3 text-sm not-italic text-text-muted">
+              <a
+                href="tel:+49123456789"
+                class="block transition-colors hover:text-primary"
+                >+49 123 456789</a
+              >
+              <a
+                href="mailto:info@handwerk-beispiel.de"
+                class="block transition-colors hover:text-primary"
+                >info@handwerk-beispiel.de</a
+              >
+              <p>Musterstraße 12<br />12345 Musterstadt</p>
+            </address>
+          </div>
+        </div>
+        <div
+          class="mt-10 flex flex-col gap-4 border-t border-border pt-6 text-xs text-text-muted sm:flex-row sm:items-center sm:justify-between"
+        >
+          <p>© 2026 DeinHandwerk. Alle Rechte vorbehalten.</p>
+          <nav
+            aria-label="Rechtliche Links"
+            class="flex flex-wrap gap-x-5 gap-y-2"
+          >
+            <a
+              href="impressum.html"
+              class="transition-colors hover:text-primary"
+              >Impressum</a
+            >
+            <a
+              href="datenschutz.html"
+              class="transition-colors hover:text-primary"
+              >Datenschutz</a
+            >
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

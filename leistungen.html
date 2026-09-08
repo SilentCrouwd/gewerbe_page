@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Leistungen von DeinHandwerk: Ausbau, Renovierung, Sanierung und Reparaturen aus einer Hand."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Leistungen | DeinHandwerk" />
+    <meta
+      property="og:description"
+      content="Entdecken Sie das Leistungsspektrum von DeinHandwerk für Ausbau, Renovierung und Sanierung."
+    />
+    <title>Leistungen | DeinHandwerk</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-background text-text">
+    <!-- Gemeinsame Navigation mit hervorgehobener aktueller Seite. -->
+    <header class="relative z-50 border-b border-border bg-card px-4 md:px-8">
+      <div
+        class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 md:h-20 lg:h-24"
+      >
+        <a
+          href="index.html"
+          class="z-20 text-xl font-bold tracking-tight text-text md:text-2xl lg:text-3xl"
+        >
+          Dein<span class="text-primary">Handwerk</span>
+        </a>
+
+        <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+        <label
+          for="mobile-menu-toggle"
+          class="z-20 flex cursor-pointer select-none items-center justify-center rounded-md p-2 text-text hover:bg-background sm:hidden"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </label>
+
+        <div
+          id="mobile-navigation"
+          class="absolute inset-x-0 top-full hidden flex-col gap-4 border-b border-border bg-card p-4 shadow-xl peer-checked:flex sm:static sm:flex sm:flex-row sm:items-center sm:gap-6 sm:border-none sm:bg-transparent sm:p-0 sm:shadow-none"
+        >
+          <nav aria-label="Hauptnavigation" class="w-full sm:w-auto">
+            <ul
+              class="m-0 flex list-none flex-col gap-2 p-0 sm:flex-row sm:items-center sm:gap-1 md:gap-3"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Startseite</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#about"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Über uns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="leistungen.html"
+                  aria-current="page"
+                  class="block rounded-md bg-background px-4 py-2.5 text-center text-base font-semibold text-primary sm:text-left lg:text-lg"
+                  >Leistungen</a
+                >
+              </li>
+              <li>
+                <a
+                  href="projekt.html"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Projekte</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ablauf.html"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >Ablauf</a
+                >
+              </li>
+              <li>
+                <a
+                  href="faq.html"
+                  class="block rounded-md px-4 py-2.5 text-center text-base font-medium text-text-muted transition-colors hover:bg-background hover:text-text sm:text-left lg:text-lg"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a
+            href="index.html#kontakt"
+            class="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-base font-semibold text-on-primary transition-opacity hover:opacity-90 sm:w-auto md:px-5"
+          >
+            Kontakt
+            <svg
+              class="h-4 w-4 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Leistungsübersicht: Einleitung und einzelne Leistungs-Karten. -->
+    <main class="gap-3 px-4 py-8 sm:px-6 md:py-12 lg:px-8">
+      <section
+        class="mb-5 mx-auto max-w-7xl rounded-xl border border-border bg-card p-6 md:p-10"
+        aria-labelledby="leistungen-heading"
+      >
+        <article class="flex max-w-3xl flex-col gap-4">
+          <p class="text-sm font-semibold uppercase tracking-wide text-primary">
+            Unsere Leistungen
+          </p>
+          <h1
+            id="leistungen-heading"
+            class="text-3xl font-bold tracking-tight text-text sm:text-4xl md:text-5xl"
+          >
+            Alles aus einer Hand
+          </h1>
+          <p class="text-base leading-relaxed text-text-muted sm:text-lg">
+            Vom Trockenbau bis zur Komplettsanierung: Wir planen und realisieren
+            Ihre Ausbau-, Renovierungs- und Sanierungsarbeiten fachgerecht,
+            transparent und termintreu.
+          </p>
+        </article>
+      </section>
+      <!-- Jede Leistung kombiniert Beschreibung, CTA und ein CSS-only Carousel. -->
+      <section
+        class="mx-auto grid max-w-7xl grid-cols-1 items-stretch gap-6 lg:grid-cols-2"
+      >
+        <article
+          id="trockenbau"
+          class="flex h-full flex-col gap-8 rounded-xl border border-border bg-card p-6 md:p-8 xl:p-10"
+          aria-labelledby="trockenbau-heading"
+        >
+          <div class="flex flex-1 flex-col gap-5">
+            <p
+              class="text-sm font-semibold uppercase tracking-wide text-primary"
+            >
+              Ausbau &amp; Gestaltung
+            </p>
+            <h2
+              id="trockenbau-heading"
+              class="text-3xl font-bold tracking-tight text-text sm:text-4xl lg:text-3xl xl:text-4xl"
+            >
+              Trockenbau und Innenausbau.
+            </h2>
+            <p
+              class="text-base leading-relaxed text-text-muted sm:text-lg lg:text-base xl:text-lg"
+            >
+              Träume stilvoll verwirklichen: Unser Meisterbetrieb verwandelt
+              Räume durch präzisen Trocken- und Innenausbau. Ob Wohntraum oder
+              Gewerbeobjekt – wir garantieren höchste Fachkompetenz, saubere
+              Ausführung und maßgeschneiderte Lösungen. Jetzt erstklassige
+              Qualität sichern!
+            </p>
+            <a
+              href="index.html#kontakt"
+              class="mt-auto inline-flex w-fit items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+            >
+              Projekt besprechen
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="relative min-w-0"
+            aria-label="Impressionen aus dem Innenausbau"
+          >
+            <!-- Radio-Buttons steuern die sichtbare Folie ohne zusätzliches JavaScript. -->
+            <input
+              class="peer/slide-1 absolute h-px w-px opacity-0"
+              type="radio"
+              name="trockenbau-carousel"
+              id="trockenbau-slide-1"
+              checked
+            />
+            <input
+              class="peer/slide-2 absolute h-px w-px opacity-0"
+              type="radio"
+              name="trockenbau-carousel"
+              id="trockenbau-slide-2"
+            />
+            <input
+              class="peer/slide-3 absolute h-px w-px opacity-0"
+              type="radio"
+              name="trockenbau-carousel"
+              id="trockenbau-slide-3"
+            />
+
+            <div
+              class="overflow-hidden rounded-md border border-border bg-background peer-checked/slide-1:[&>div]:translate-x-0 peer-checked/slide-2:[&>div]:-translate-x-full peer-checked/slide-3:[&>div]:translate-x-[-200%]"
+            >
+              <div
+                class="flex transition-transform duration-500 motion-reduce:transition-none"
+              >
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <img
+                    class="block h-full w-full object-cover"
+                    src="src/assets/img/sauberPlanung.webp"
+                    alt="Helle Innenräume während des Ausbaus"
+                    loading="lazy"
+                  />
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Saubere Planung bis ins Detail
+                  </figcaption>
+                </figure>
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <img
+                    class="block h-full w-full object-cover"
+                    src="src/assets/img/raumeMitCharakter.webp"
+                    alt="Moderner Wohnraum mit hochwertigem Innenausbau"
+                    loading="lazy"
+                  />
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Räume mit Charakter und Funktion
+                  </figcaption>
+                </figure>
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <img
+                    class="block h-full w-full object-cover"
+                    src="src/assets/img/flexibleLösung.webp"
+                    alt="Offener Arbeitsbereich mit moderner Raumaufteilung"
+                    loading="lazy"
+                  />
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Flexible Lösungen für jeden Grundriss
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center gap-2 pt-4"
+              aria-label="Bildauswahl"
+            >
+              <label
+                for="trockenbau-slide-1"
+                aria-label="Bild 1"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/slide-1:bg-primary"
+              ></label>
+              <label
+                for="trockenbau-slide-2"
+                aria-label="Bild 2"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/slide-2:bg-primary"
+              ></label>
+              <label
+                for="trockenbau-slide-3"
+                aria-label="Bild 3"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/slide-3:bg-primary"
+              ></label>
+            </div>
+          </div>
+        </article>
+
+        <article
+          id="komplettsanierung"
+          class="flex h-full flex-col gap-8 rounded-xl border border-border bg-card p-6 md:p-8 xl:p-10"
+          aria-labelledby="komplettsanierung-heading"
+        >
+          <div class="flex flex-1 flex-col gap-5">
+            <p
+              class="text-sm font-semibold uppercase tracking-wide text-primary"
+            >
+              Sanierung &amp; Modernisierung
+            </p>
+            <h2
+              id="komplettsanierung-heading"
+              class="text-3xl font-bold tracking-tight text-text sm:text-4xl lg:text-3xl xl:text-4xl"
+            >
+              Komplettsanierung
+            </h2>
+            <p
+              class="text-base leading-relaxed text-text-muted sm:text-lg lg:text-base xl:text-lg"
+            >
+              Von der ersten Bestandsaufnahme bis zur finalen Abnahme begleiten
+              wir Ihre Komplettsanierung. Wir koordinieren alle Arbeitsschritte,
+              modernisieren Räume nachhaltig und schaffen ein Ergebnis, das
+              technisch überzeugt und langfristig Freude macht.
+            </p>
+            <a
+              href="index.html#kontakt"
+              class="mt-auto inline-flex w-fit items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+            >
+              Projekt besprechen
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="relative min-w-0"
+            aria-label="Placeholder für Komplettsanierung"
+          >
+            <input
+              class="peer/sanierung-1 absolute h-px w-px opacity-0"
+              type="radio"
+              name="sanierung-carousel"
+              id="sanierung-slide-1"
+              checked
+            />
+            <input
+              class="peer/sanierung-2 absolute h-px w-px opacity-0"
+              type="radio"
+              name="sanierung-carousel"
+              id="sanierung-slide-2"
+            />
+            <input
+              class="peer/sanierung-3 absolute h-px w-px opacity-0"
+              type="radio"
+              name="sanierung-carousel"
+              id="sanierung-slide-3"
+            />
+
+            <div
+              class="overflow-hidden rounded-md border border-border bg-background peer-checked/sanierung-1:[&>div]:translate-x-0 peer-checked/sanierung-2:[&>div]:-translate-x-full peer-checked/sanierung-3:[&>div]:translate-x-[-200%]"
+            >
+              <div
+                class="flex transition-transform duration-500 motion-reduce:transition-none"
+              >
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <div
+                    class="flex h-full items-center justify-center bg-background text-sm font-semibold text-text-muted"
+                  >
+                    <img
+                      class="block h-full w-full object-cover"
+                      src="src/assets/img/bestandsaufnahme.webp"
+                      alt="Offener Arbeitsbereich mit moderner Raumaufteilung"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Bestandsaufnahme
+                  </figcaption>
+                </figure>
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <div
+                    class="flex h-full items-center justify-center bg-background text-sm font-semibold text-text-muted"
+                  >
+                    <img
+                      class="block h-full w-full object-cover"
+                      src="src/assets/img/koordinierteSanierung.webp"
+                      alt="Offener Arbeitsbereich mit moderner Raumaufteilung"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Koordinierte Sanierung
+                  </figcaption>
+                </figure>
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <div
+                    class="flex h-full items-center justify-center bg-background text-sm font-semibold text-text-muted"
+                  >
+                    <img
+                      class="block h-full w-full object-cover"
+                      src="src/assets/img/moderneErgebnisse.webp"
+                      alt="Offener Arbeitsbereich mit moderner Raumaufteilung"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Modernes Ergebnis
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center gap-2 pt-4"
+              aria-label="Bildauswahl"
+            >
+              <label
+                for="sanierung-slide-1"
+                aria-label="Bild 1"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/sanierung-1:bg-primary"
+              ></label>
+              <label
+                for="sanierung-slide-2"
+                aria-label="Bild 2"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/sanierung-2:bg-primary"
+              ></label>
+              <label
+                for="sanierung-slide-3"
+                aria-label="Bild 3"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/sanierung-3:bg-primary"
+              ></label>
+            </div>
+          </div>
+        </article>
+
+        <article
+          id="bodenlegearbeiten"
+          class="flex h-full flex-col gap-8 rounded-xl border border-border bg-card p-6 md:p-8 xl:p-10"
+          aria-labelledby="bodenlegearbeiten-heading"
+        >
+          <div class="flex flex-1 flex-col gap-5">
+            <p
+              class="text-sm font-semibold uppercase tracking-wide text-primary"
+            >
+              Böden &amp; Oberflächen
+            </p>
+            <h2
+              id="bodenlegearbeiten-heading"
+              class="text-3xl font-bold tracking-tight text-text sm:text-4xl lg:text-3xl xl:text-4xl"
+            >
+              Bodenlegearbeiten
+            </h2>
+            <p
+              class="text-base leading-relaxed text-text-muted sm:text-lg lg:text-base xl:text-lg"
+            >
+              Der richtige Boden prägt die Wirkung eines Raumes. Wir beraten Sie
+              bei der Auswahl, bereiten den Untergrund sorgfältig vor und
+              verlegen hochwertige Bodenbeläge sauber, präzise und passend zu
+              Ihrem Alltag.
+            </p>
+            <a
+              href="index.html#kontakt"
+              class="mt-auto inline-flex w-fit items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+            >
+              Projekt besprechen
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="relative min-w-0"
+            aria-label="Placeholder für Bodenlegearbeiten"
+          >
+            <input
+              class="peer/boden-1 absolute h-px w-px opacity-0"
+              type="radio"
+              name="boden-carousel"
+              id="boden-slide-1"
+              checked
+            />
+            <input
+              class="peer/boden-2 absolute h-px w-px opacity-0"
+              type="radio"
+              name="boden-carousel"
+              id="boden-slide-2"
+            />
+            <input
+              class="peer/boden-3 absolute h-px w-px opacity-0"
+              type="radio"
+              name="boden-carousel"
+              id="boden-slide-3"
+            />
+
+            <div
+              class="overflow-hidden rounded-md border border-border bg-background peer-checked/boden-1:[&>div]:translate-x-0 peer-checked/boden-2:[&>div]:-translate-x-full peer-checked/boden-3:[&>div]:translate-x-[-200%]"
+            >
+              <div
+                class="flex transition-transform duration-500 motion-reduce:transition-none"
+              >
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <img
+                    class="block h-full w-full object-cover"
+                    src="src/assets/img/flexibleLösung.webp"
+                    alt="Moderner Innenraum mit flexibler Raumaufteilung"
+                    loading="lazy"
+                  />
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Untergrundvorbereitung
+                  </figcaption>
+                </figure>
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <img
+                    class="block h-full w-full object-cover"
+                    src="src/assets/img/sauberPlanung.webp"
+                    alt="Sorgfältig geplanter Innenausbau"
+                    loading="lazy"
+                  />
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Präzise Verlegung
+                  </figcaption>
+                </figure>
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <img
+                    class="block h-full w-full object-cover"
+                    src="src/assets/img/moderneErgebnisse.webp"
+                    alt="Modernisiertes Ergebnis nach einer Sanierung"
+                    loading="lazy"
+                  />
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Hochwertige Oberflächen
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center gap-2 pt-4"
+              aria-label="Bildauswahl"
+            >
+              <label
+                for="boden-slide-1"
+                aria-label="Bild 1"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/boden-1:bg-primary"
+              ></label>
+              <label
+                for="boden-slide-2"
+                aria-label="Bild 2"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/boden-2:bg-primary"
+              ></label>
+              <label
+                for="boden-slide-3"
+                aria-label="Bild 3"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/boden-3:bg-primary"
+              ></label>
+            </div>
+          </div>
+        </article>
+
+        <article
+          id="malerarbeiten"
+          class="flex h-full flex-col gap-8 rounded-xl border border-border bg-card p-6 md:p-8 xl:p-10"
+          aria-labelledby="malerarbeiten-heading"
+        >
+          <div class="flex flex-1 flex-col gap-5">
+            <p
+              class="text-sm font-semibold uppercase tracking-wide text-primary"
+            >
+              Farbe &amp; Finish
+            </p>
+            <h2
+              id="malerarbeiten-heading"
+              class="text-3xl font-bold tracking-tight text-text sm:text-4xl lg:text-3xl xl:text-4xl"
+            >
+              Maler und Tapezierarbeiten
+            </h2>
+            <p
+              class="text-base leading-relaxed text-text-muted sm:text-lg lg:text-base xl:text-lg"
+            >
+              Mit abgestimmten Farben, sauberen Kanten und passenden Tapeten
+              geben wir Ihren Räumen ein neues Gesicht. Wir übernehmen die
+              Vorbereitung, Gestaltung und fachgerechte Ausführung für ein
+              gleichmäßiges Finish.
+            </p>
+            <a
+              href="index.html#kontakt"
+              class="mt-auto inline-flex w-fit items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+            >
+              Projekt besprechen
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="relative min-w-0"
+            aria-label="Placeholder für Maler und Tapezierarbeiten"
+          >
+            <input
+              class="peer/maler-1 absolute h-px w-px opacity-0"
+              type="radio"
+              name="maler-carousel"
+              id="maler-slide-1"
+              checked
+            />
+            <input
+              class="peer/maler-2 absolute h-px w-px opacity-0"
+              type="radio"
+              name="maler-carousel"
+              id="maler-slide-2"
+            />
+            <input
+              class="peer/maler-3 absolute h-px w-px opacity-0"
+              type="radio"
+              name="maler-carousel"
+              id="maler-slide-3"
+            />
+
+            <div
+              class="overflow-hidden rounded-md border border-border bg-background peer-checked/maler-1:[&>div]:translate-x-0 peer-checked/maler-2:[&>div]:-translate-x-full peer-checked/maler-3:[&>div]:translate-x-[-200%]"
+            >
+              <div
+                class="flex transition-transform duration-500 motion-reduce:transition-none"
+              >
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <img
+                    class="block h-full w-full object-cover"
+                    src="src/assets/img/raumeMitCharakter.webp"
+                    alt="Wohnraum mit individuellem Charakter"
+                    loading="lazy"
+                  />
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Farbkonzept
+                  </figcaption>
+                </figure>
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <img
+                    class="block h-full w-full object-cover"
+                    src="src/assets/img/bestandsaufnahme.webp"
+                    alt="Bestandsaufnahme eines Innenraums"
+                    loading="lazy"
+                  />
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Saubere Tapezierarbeit
+                  </figcaption>
+                </figure>
+                <figure
+                  class="relative m-0 aspect-4/3 min-w-full overflow-hidden"
+                >
+                  <img
+                    class="block h-full w-full object-cover"
+                    src="src/assets/img/koordinierteSanierung.webp"
+                    alt="Koordinierte Arbeiten bei einer Sanierung"
+                    loading="lazy"
+                  />
+                  <figcaption
+                    class="absolute bottom-4 left-4 right-4 rounded-md border border-overlay-border/35 bg-overlay/80 px-4 py-3 text-sm font-semibold text-on-overlay"
+                  >
+                    Gleichmäßiges Finish
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center gap-2 pt-4"
+              aria-label="Bildauswahl"
+            >
+              <label
+                for="maler-slide-1"
+                aria-label="Bild 1"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/maler-1:bg-primary"
+              ></label>
+              <label
+                for="maler-slide-2"
+                aria-label="Bild 2"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/maler-2:bg-primary"
+              ></label>
+              <label
+                for="maler-slide-3"
+                aria-label="Bild 3"
+                class="h-1 w-8 cursor-pointer rounded-full bg-border transition-colors duration-200 hover:bg-secondary motion-reduce:transition-none peer-checked/maler-3:bg-primary"
+              ></label>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Einheitlicher Footer mit rechtlichen Links. -->
+    <footer class="border-t border-border bg-card px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl py-12 md:py-16">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="sm:col-span-2 lg:col-span-1">
+            <a
+              href="index.html"
+              class="text-xl font-bold tracking-tight text-text md:text-2xl"
+            >
+              Dein<span class="text-primary">Handwerk</span>
+            </a>
+            <p class="mt-4 max-w-xs text-sm leading-6 text-text-muted">
+              Ihr zuverlässiger Partner für Ausbau, Renovierung und
+              Sanierungsarbeiten in der Region.
+            </p>
+            <a
+              href="index.html#kontakt"
+              class="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+            >
+              Projekt anfragen
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div>
+            <h2 class="text-sm font-semibold uppercase tracking-wide text-text">
+              Navigation
+            </h2>
+            <nav aria-label="Footer-Navigation" class="mt-4">
+              <ul class="space-y-3 text-sm text-text-muted">
+                <li>
+                  <a
+                    href="index.html#about"
+                    class="transition-colors hover:text-primary"
+                    >Über uns</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="leistungen.html"
+                    class="transition-colors hover:text-primary"
+                    >Leistungen</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="index.html#kontakt"
+                    class="transition-colors hover:text-primary"
+                    >Kontakt</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div>
+            <h2 class="text-sm font-semibold uppercase tracking-wide text-text">
+              Leistungen
+            </h2>
+            <ul class="mt-4 space-y-3 text-sm text-text-muted">
+              <li>
+                <a
+                  href="#trockenbau"
+                  class="transition-colors hover:text-primary"
+                >
+                  Trockenbau &amp; Innenausbau
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#komplettsanierung"
+                  class="transition-colors hover:text-primary"
+                >
+                  Komplettsanierung
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#bodenlegearbeiten"
+                  class="transition-colors hover:text-primary"
+                >
+                  Bodenlegearbeiten
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#malerarbeiten"
+                  class="transition-colors hover:text-primary"
+                >
+                  Maler- &amp; Tapezierarbeiten
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#energetische-daemmung"
+                  class="transition-colors hover:text-primary"
+                >
+                  Energetische Dämmung
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#sonderleistungen"
+                  class="transition-colors hover:text-primary"
+                >
+                  Sonderleistungen &amp; Reparaturen
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-sm font-semibold uppercase tracking-wide text-text">
+              Kontakt
+            </h2>
+            <address class="mt-4 space-y-3 text-sm not-italic text-text-muted">
+              <a
+                href="tel:+49123456789"
+                class="block transition-colors hover:text-primary"
+                >+49 123 456789</a
+              >
+              <a
+                href="mailto:info@handwerk-beispiel.de"
+                class="block transition-colors hover:text-primary"
+                >info@handwerk-beispiel.de</a
+              >
+              <p>Musterstraße 12<br />12345 Musterstadt</p>
+            </address>
+          </div>
+        </div>
+
+        <div
+          class="mt-10 flex flex-col gap-4 border-t border-border pt-6 text-xs text-text-muted sm:flex-row sm:items-center sm:justify-between"
+        >
+          <p>© 2026 DeinHandwerk. Alle Rechte vorbehalten.</p>
+          <nav
+            aria-label="Rechtliche Links"
+            class="flex flex-wrap gap-x-5 gap-y-2"
+          >
+            <a
+              href="impressum.html"
+              class="transition-colors hover:text-primary"
+              >Impressum</a
+            >
+            <a
+              href="datenschutz.html"
+              class="transition-colors hover:text-primary"
+              >Datenschutz</a
+            >
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

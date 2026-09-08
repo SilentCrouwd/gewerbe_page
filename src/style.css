@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* 1. Light Mode Default Base-Variablen */
+/* Farbpalette für den hellen Standardmodus. */
 :root {
   --color-primary: #eb2577;
   --color-secondary: #475569;
@@ -9,9 +9,13 @@
   --color-background: #f8fafc;
   --color-text: #0f172a;
   --color-text-muted: #64748b;
+  --color-on-primary: #ffffff;
+  --color-overlay: #0f172a;
+  --color-on-overlay: #ffffff;
+  --color-overlay-border: #ffffff;
 }
 
-/* 2. Dark Mode Überschreibungen */
+/* Die gleichen Rollen erhalten im dunklen Modus andere Farbwerte. */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #3b82f6;
@@ -21,10 +25,14 @@
     --color-background: #0f172a;
     --color-text: #f8fafc;
     --color-text-muted: #94a3b8;
+    --color-on-primary: #ffffff;
+    --color-overlay: #020617;
+    --color-on-overlay: #ffffff;
+    --color-overlay-border: #ffffff;
   }
 }
 
-/* 3. Tailwind v4 Theme Mapping */
+/* Diese Variablen werden als Tailwind-Farben verfügbar gemacht. */
 @theme {
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
@@ -33,9 +41,13 @@
   --color-background: var(--color-background);
   --color-text: var(--color-text);
   --color-text-muted: var(--color-text-muted);
+  --color-on-primary: var(--color-on-primary);
+  --color-overlay: var(--color-overlay);
+  --color-on-overlay: var(--color-on-overlay);
+  --color-overlay-border: var(--color-overlay-border);
 }
 
-/* 4. Base Layer Reset & Standard-Styling */
+/* Einheitlicher Reset und globale Grundfarben für alle Seiten. */
 @layer base {
   *,
   ::before,
