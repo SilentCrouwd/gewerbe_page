@@ -2,13 +2,13 @@
 
 /* Farbpalette für den hellen Standardmodus. */
 :root {
-  --color-primary: #eb2577;
+  --color-primary: #a61e4d;
   --color-secondary: #475569;
   --color-border: #e2e8f0;
   --color-card: #ffffff;
   --color-background: #f8fafc;
   --color-text: #0f172a;
-  --color-text-muted: #64748b;
+  --color-text-muted: #526173;
   --color-on-primary: #ffffff;
   --color-overlay: #0f172a;
   --color-on-overlay: #ffffff;
@@ -18,14 +18,14 @@
 /* Die gleichen Rollen erhalten im dunklen Modus andere Farbwerte. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #3b82f6;
-    --color-secondary: #94a3b8;
+    --color-primary: #60a5fa;
+    --color-secondary: #cbd5e1;
     --color-border: #334155;
     --color-card: #1e293b;
     --color-background: #0f172a;
     --color-text: #f8fafc;
-    --color-text-muted: #94a3b8;
-    --color-on-primary: #ffffff;
+    --color-text-muted: #cbd5e1;
+    --color-on-primary: #0f172a;
     --color-overlay: #020617;
     --color-on-overlay: #ffffff;
     --color-overlay-border: #ffffff;

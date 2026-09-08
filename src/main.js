@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     };
 
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenuToggle.checked = !mobileMenuToggle.checked;
+      updateMobileMenuState();
+    });
     mobileMenuToggle.addEventListener("change", updateMobileMenuState);
     mobileNavigation.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
